@@ -5,16 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "esm": "^3.2.25",
+    "express": "^4.17.3",
+    "ignore": "^5.2.0",
     "pg": "^7.18.2",
     "sequelize": "^4.42.0"
   },
   "scripts": {},
-  "author": "",
+  "author": "Júnior Moura <geraldomartins10@gmail.com>",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gmeneguz/intro_node_pg_sequelize.git"
-  },
+  "repository": "git+https://github.com/gmeneguz/intro_node_pg_sequelize.git",
   "bugs": {
     "url": "https://github.com/gmeneguz/intro_node_pg_sequelize/issues"
   },
