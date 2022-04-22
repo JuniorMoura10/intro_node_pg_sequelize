@@ -1,6 +1,6 @@
-const pg = require('pg')
+import { Client } from 'pg'
 
-const client = new pg.Client({
+const client = new Client({
   user: 'postgres',
   host: 'localhost',
   database: 'postgres',
@@ -8,4 +8,4 @@ const client = new pg.Client({
   port: 5432,
 })
 
-module.exports = client
+export default client

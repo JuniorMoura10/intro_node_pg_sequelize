@@ -1,19 +1,19 @@
-const db = require('./_database')
+import { connect, query, end } from './_database'
 
 async function createTables(){
-  await db.connect()
+  await connect()
 
-  await db.query(`CREATE TABLE evento(
+  await query(`CREATE TABLE evento(
    id serial PRIMARY KEY,
    nome VARCHAR (50) UNIQUE NOT NULL
   )`)
 
-  await db.query(`CREATE TABLE participante(
+  await query(`CREATE TABLE participante(
    id serial PRIMARY KEY,
    nome VARCHAR (50) UNIQUE NOT NULL
   )`)
 
-  await db.query(`CREATE TABLE evento_participante(
+  await query(`CREATE TABLE evento_participante(
     evento_id integer NOT NULL,
     participante_id integer NOT NULL,
     PRIMARY KEY (evento_id, participante_id),
@@ -21,7 +21,7 @@ async function createTables(){
     FOREIGN KEY (participante_id) REFERENCES participante (id)
   )`)
 
-  await db.end()
+  await end()
 
   console.log("Tabelas Criadas");
 }
